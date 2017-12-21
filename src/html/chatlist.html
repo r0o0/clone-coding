@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>KakaoTalk-Chats</title>
+	<!--  CSS  -->
+</head>
+<body>
+	<!-- 채팅 리스트 페이지 - 헤더 -->
+  <header>
+		<h1 class="title">채팅</h1>
+		<button class="edit" type="button">편집</button>
+  </header>
+	<!-- 카카오톡 네비게이션 -->
+  <nav class="main_nav">
+		<h1 class="a11y_hidden">메뉴</h1>
+		<ul class="clearfix">
+			<li class="tab_friends">
+				<a href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+						<title>친구</title>
+						<path fill="#C1C1C1" fill-rule="evenodd" d="M6.98694588,4.24184734 C6.8151615,4.81586931 6.86343892,6.113923 7.13177812,8.13600841 C6.35447539,7.90284416 5.96582403,7.90284416 5.96582403,8.13600841 C5.96582403,8.88058151 8.63310947,14.095224 9.33744766,14.5644383 C9.23467195,15.3640951 9.11388807,16.1708145 8.97509602,16.9845967 C6.2108314,17.7831484 3.74193453,18.7541312 1.5684054,19.8975451 C0.374305833,20.5794443 -0.137951315,21.7833799 0.0316339561,23.509352 L24.3143355,23.415029 C24.5433557,21.9463566 24.1551218,20.8505196 23.1496338,20.127518 C20.5114855,18.5576323 17.8156576,17.4797899 15.0621503,16.8939909 C14.9901374,16.0353498 14.9239224,15.2588323 14.8635051,14.5644383 C15.527908,14.005208 17.8632791,8.53650372 17.9923921,8.13600841 C18.0784674,7.86901153 17.7263109,7.86901153 16.9359227,8.13600841 C17.165548,5.06904835 17.165548,3.27657657 16.9359227,2.75859307 C16.5348825,1.1841679 15.756234,0 14.8635051,0 C13.3480151,1.36938057 10.8833589,1.10218691 9.2028131,1.91888271 C7.65496239,2.67109259 7.3677892,3.42665927 6.98694588,4.24184734 Z"/>
+					</svg>
+					<em>친구</em>
+				</a>
+			</li>
+			<li class="tab_chat">
+				<a class="active" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22">
+						<title>채팅</title>
+						<g fill="#C1C1C1">
+							<ellipse cx="12" cy="9" rx="12" ry="9"/>
+							<polygon points="5 16 12.401 17.108 5 22"/>
+						</g>
+					</svg>
+					<em>채팅</em>
+				</a>
+			</li>
+			<li class="tab_channel">
+				<a href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23">
+						<title>채널</title>
+							<path fill="#C1C1C1" fill-rule="evenodd" d="M3,0 L21,0 C22.6568542,-3.04359188e-16 24,1.34314575 24,3 L24,20 C24,21.6568542 22.6568542,23 21,23 L3,23 C1.34314575,23 2.02906125e-16,21.6568542 0,20 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z M4,2 C2.8954305,2 2,2.8954305 2,4 L2,19 C2,20.1045695 2.8954305,21 4,21 L20,21 C21.1045695,21 22,20.1045695 22,19 L22,4 C22,2.8954305 21.1045695,2 20,2 L4,2 Z M6,5 L10,5 C10.5522847,5 11,5.44771525 11,6 L11,9 C11,9.55228475 10.5522847,10 10,10 L6,10 C5.44771525,10 5,9.55228475 5,9 L5,6 C5,5.44771525 5.44771525,5 6,5 Z M14,5 L18,5 C18.5522847,5 19,5.44771525 19,6 C19,6.55228475 18.5522847,7 18,7 L14,7 C13.4477153,7 13,6.55228475 13,6 C13,5.44771525 13.4477153,5 14,5 Z M14,8 L18,8 C18.5522847,8 19,8.44771525 19,9 C19,9.55228475 18.5522847,10 18,10 L14,10 C13.4477153,10 13,9.55228475 13,9 C13,8.44771525 13.4477153,8 14,8 Z M14,13 L18,13 C18.5522847,13 19,13.4477153 19,14 C19,14.5522847 18.5522847,15 18,15 L14,15 C13.4477153,15 13,14.5522847 13,14 C13,13.4477153 13.4477153,13 14,13 Z M14,16 L18,16 C18.5522847,16 19,16.4477153 19,17 C19,17.5522847 18.5522847,18 18,18 L14,18 C13.4477153,18 13,17.5522847 13,17 C13,16.4477153 13.4477153,16 14,16 Z M6,13 L10,13 C10.5522847,13 11,13.4477153 11,14 L11,17 C11,17.5522847 10.5522847,18 10,18 L6,18 C5.44771525,18 5,17.5522847 5,17 L5,14 C5,13.4477153 5.44771525,13 6,13 Z"/>
+					</svg>
+					<em>채널</em>
+				</a>
+			</li>
+			<li class="tab_more">
+				<a href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="7" viewBox="0 0 25 7">
+						<title>더보기</title>
+						<g fill="#C1C1C1" fill-rule="evenodd">
+							<circle cx="3.5" cy="3.5" r="3.5"/>
+							<circle cx="12.5" cy="3.5" r="3.5"/>
+							<circle cx="21.5" cy="3.5" r="3.5"/>
+						</g>
+					</svg>
+					<em>더보기</em>
+				</a>
+			</li>
+		</ul>
+  </nav>
+	<!-- 채팅 리스트 페이지 - 컨텐츠 -->
+  <main>
+		<!-- 채팅 리스트 페이지 - 메뉴 -->
+		<nav class="add_room">
+			<button type="button">채팅방 생성하기</button>
+			<ul>
+				<li><a class="normal" href="#">일반채팅</a></li>
+				<li><a class="private" href="#">비밀채팅</a></li>
+				<li><a class="open" href="#">오픈채팅</a></li>
+			</ul>
+		</nav>
+		<!-- 채팅 리스트 페이지 - 서치 바 -->
+		<div class="search_bar">
+			<label for="search">검색</label>
+			<input id="search" type="text" placeholder="친구, 채팅방, 플러스친구 검색">
+		</div>
+		<!-- 채팅 리스트 페이지 - 리스트 쫘라락 -->
+		<section class="chatroom_list">
+			<h1 class="a11y_hidden">체팅방 리스트</h1>
+			<ul>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">디프만 3기 디프만 3기 디프만 3기 디프만 3기 디프만 3기 디프만 3기 디프만 3기 디프만 3기</h1>
+							<p class="last-msg">디프만 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">오후 2:00PM</em>
+							<strong class="noti"><span class="a11y_hidden">새로운 메시지</span>+100</strong>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">후후</h1>
+							<p class="last-msg">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="후후 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">하하</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">후후</h1>
+							<p class="last-msg">디프만 세션 공지디프만 세션 공지 디프만 세션 공지 디프만 세션 공지 디프만 세션 공지 디프만 세션 공지 디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">오후 10:30</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">호호</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="content">
+							<h1 class="room_title">ㅎㅎㅎㅎㅎㅎㅎㅎ</h1>
+							<p class="last-msg">디프만 세션 공지</p>
+						</div>
+						<div class="profile">
+							<img src="" alt="디프만 프로필">
+						</div>
+						<div class="noti_update">
+							<em class="msg_date">어제</em>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+  </main>
+</body>
+</html>

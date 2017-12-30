@@ -23,6 +23,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
 	display: block;
 }
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 body {
 	line-height: 1;
 }
@@ -40,4 +47,13 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+button {
+  padding: 0;
+  background: transparent;
+  border: 0 none;
+	cursor: pointer;
+}
+a {
+  text-decoration: none;
 }

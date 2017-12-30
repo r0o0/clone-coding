@@ -9,7 +9,9 @@
 	<!-- 파비콘 아이콘 추가 -->
 	<link rel="icon" type="image/png" href="../images/icon_chat.png">
 	<!--  CSS  -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"> -->
 	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="../css/chatlist.css">
 </head>
 <body>
@@ -64,6 +66,7 @@
 					</svg>
 					<em>더보기</em>
 				</a>
+
 			</li>
 		</ul>
   </nav>
@@ -72,11 +75,13 @@
 		<!-- 채팅 리스트 페이지 - 메뉴 -->
 		<nav class="add_room">
 			<button class="btn_openMenu" type="button">채팅방 생성하기</button>
-			<ul>
-				<li><a class="normal" href="#">일반채팅</a></li>
-				<li><a class="private" href="#">비밀채팅</a></li>
-				<li><a class="open" href="#">오픈채팅</a></li>
-			</ul>
+			<div class="cover">
+				<ul class="add_menu">
+					<li><a class="normal" href="#">일반채팅</a></li>
+					<li><a class="private" href="#">비밀채팅</a></li>
+					<li><a class="open" href="#">오픈채팅</a></li>
+				</ul>
+			</div>
 		</nav>
 		<!-- 채팅 리스트 페이지 - 서치 바 -->
 		<div class="search_bar">

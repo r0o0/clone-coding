@@ -376,6 +376,8 @@ main {
     text-indent: -9999px;
 }
 
+
+
 .search_bar input {
     padding: 0 28px;
     width: 100%;
@@ -383,13 +385,36 @@ main {
     border: 0 none;
     border-radius: 10px;
     font-size: 14px;
-    background: #f1f2f4;
+		background: #f1f2f4;
 }
+
+/**
+ * input 창을 클릭 하기 전에 사용자들이 볼 수 있도록
+ * input 창안에 텍스트를 적은것을 placholder text라고 합니다.
+ * input::placeholder 로 텍스트에 스타일을 입힐 수 있습니다.
+ */
 
 .search_bar input::placeholder {
     font-size: 16px;
     color: #aaa;
 }
+
+/**
+ * input 창에 클릭했을 때 브라우저 기본 세팅으로 들어가있는 태두리를
+ * outline: none; 으로 없애줍니다.
+ * 주의사항: outline을 없애게 되면 키보드 tab 키를 사용해서 사이트를 둘러보는 분들이 
+ * tab 키를 사용했을 때 아무런 피드백을 받을 수 없게 됩니다. 
+ * outline을 꼭 없애야 한다면 :focus 에 따로 스타일을 입혀 
+ * :focus가 되어 있는 상태라는것을 알려주는것이 접근성을 준수 하면서 
+ * 사이트 디자인의 통일성을 유지 할 수 있는 방법입니다. 
+ */
+
+.search_bar input:focus {
+	outline: none;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
 
 
 /**** 

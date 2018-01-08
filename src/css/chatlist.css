@@ -224,7 +224,7 @@ header .btn_edit {
     height: 25px;
 }
 
-.main_nav a:hover path, 
+.main_nav a:hover path,
 .main_nav a:hover g {
     fill: #4c2f31;
     transition: all .4s ease-in-out;
@@ -401,6 +401,11 @@ main {
  content list - start
  ****/
 
+
+/**
+ * 
+ */
+
 .chatroom_list li {
     position: relative;
     padding: 14px 74px 12px 77px;
@@ -408,6 +413,11 @@ main {
     height: 72px;
     border: 1px solid #eee;
 }
+
+
+/**
+ * 
+ */
 
 .chatroom_list .room_title {
     overflow: hidden;
@@ -419,6 +429,11 @@ main {
     color: #2e2e2e;
 }
 
+
+/**
+ * 
+ */
+
 .chatroom_list .last-msg {
     overflow: hidden;
     white-space: nowrap;
@@ -429,6 +444,11 @@ main {
     color: #a1a1a1;
 }
 
+
+/**
+ * 
+ */
+
 .profile {
     position: absolute;
     top: 10px;
@@ -437,7 +457,9 @@ main {
     width: 52px;
     height: 52px;
     border-radius: 50%;
+    border: 1px solid #e0e0e0;
 }
+
 
 /**
  * 프로필 이미지 위 아래 중앙 정렬하는 법
@@ -445,7 +467,7 @@ main {
  * 지금 프로필 이미지의 케이스에서는
  * 각각의 프로필 이미지들의 사이즈들이 달라서 
  * 다 똑같은 width 와 height 를 가지고 있지 않습니다.
- * 이러 했을 때 transform: translate(-50%, -50%);  
+ * 이러 했을 때 transform: translate(-50%, -50%);
  */
 
 .profile img {
@@ -460,7 +482,6 @@ main {
     position: absolute;
     top: 12px;
     right: 12px;
-    /* background: red; */
 }
 
 .noti_update .msg_date {

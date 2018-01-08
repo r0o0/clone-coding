@@ -376,8 +376,6 @@ main {
     text-indent: -9999px;
 }
 
-
-
 .search_bar input {
     padding: 0 28px;
     width: 100%;
@@ -385,8 +383,9 @@ main {
     border: 0 none;
     border-radius: 10px;
     font-size: 14px;
-		background: #f1f2f4;
+    background: #f1f2f4;
 }
+
 
 /**
  * input 창을 클릭 하기 전에 사용자들이 볼 수 있도록
@@ -410,11 +409,11 @@ main {
  */
 
 .search_bar input:focus {
-	outline: none;
-	background: #fff;
-	border: 1px solid #ccc;
+    outline: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    transition: all .45s ease-out;
 }
-
 
 
 /**** 
@@ -471,6 +470,9 @@ main {
 
 
 /**
+ * 디자인에서 프로필 이미지는 항상 각 리스트에서
+ * 위에서부터 10px, 왼쪽 옆에서부터 12px 떨어져 있습니다.
+ * 그래서 position: absolute; 
  * 
  */
 

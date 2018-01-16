@@ -262,7 +262,7 @@ main {
 
 .add_room .btn_openMenu {
     position: fixed;
-    z-index: 200;
+    z-index: 300;
     bottom: 72px;
     right: 16px;
     overflow: hidden;
@@ -296,6 +296,7 @@ main {
 .add_room .cover {
     display: none;
     position: fixed;
+    z-index:300;
     bottom: 74px;
     right: 16px;
     width: 58px;
